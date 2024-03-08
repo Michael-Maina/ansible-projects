@@ -17,7 +17,7 @@ Ansible is an open-source automation tool that simplifies IT orchestration, conf
 ## Projects
 
 1. **Update Servers**: Automate the process of updating packages on multiple servers using Ansible playbooks.
-   - Project: [Update multiple servers](../blob/master/update-multiple-servers)
+   - Project: [Update multiple servers](../tree/master/update-multiple-servers)
    - Description: This playbook updates packages on servers listed in the inventory.
 
 
