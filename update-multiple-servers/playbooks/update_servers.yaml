@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  vars_files:
+    - ../group_vars/all.yaml
+  tasks:
+    - name: update servers
+      apt:
+        update_cache: yes
+        upgrade: dist
