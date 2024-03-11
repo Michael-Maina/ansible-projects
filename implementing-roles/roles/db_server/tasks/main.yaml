@@ -1,0 +1,5 @@
+- name: install mysql server package
+  tags: db,mysql
+  apt:
+    name: mysql-server
+    state: latest
