@@ -1,0 +1,29 @@
+---
+
+- hosts: all
+  become: true
+  vars_files:
+    - ./group_vars/all.yaml
+  roles:
+    - base
+
+- hosts: web_server
+  become: true
+  vars_files:
+    - ./group_vars/all.yaml
+  roles:
+    - web_server
+
+- hosts: load_balancer
+  become: true
+  vars_files:
+    - ./group_vars/all.yaml
+  roles:
+    - load_balancer
+
+- hosts: db_server
+  become: true
+  vars_files:
+    - ./group_vars/all.yaml
+  roles:
+    - db_server
