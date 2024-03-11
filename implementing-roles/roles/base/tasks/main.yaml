@@ -1,0 +1,42 @@
+- name: create ansible user
+  tags: base
+  user:
+    name: stilgar
+    state: present
+    shell: /bin/bash
+    groups: sudo
+    append: yes
+
+- name: update servers
+  tags: base
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: create .ssh directory
+  tags: base
+  file:
+    path: /home/stilgar/.ssh
+    state: directory
+    owner: stilgar
+    group: stilgar
+    mode: 0700
+
+- name: copy public key
+  tags: base
+  copy:
+    remote_src: true
+    src: /root/.ssh/authorized_keys
+    dest: /home/stilgar/.ssh/authorized_keys
+    owner: stilgar
+    group: stilgar
+    mode: 0600
+
+- name: copy sudoers file
+  tags: base
+  copy:
+    src: ansible_sudoers
+    dest: /etc/sudoers.d/stilgar
+    owner: root
+    group: root
+    mode: 0440
