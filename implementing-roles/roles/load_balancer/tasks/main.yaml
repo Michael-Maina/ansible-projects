@@ -1,0 +1,5 @@
+- name: install haproxy package
+  tags: haproxy,lb
+  apt:
+    name: haproxy
+    state: latest
