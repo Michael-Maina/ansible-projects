@@ -20,6 +20,10 @@ Ansible is an open-source automation tool that simplifies IT orchestration, conf
    - Project: [Update multiple servers](./update-multiple-servers)
    - Description: This playbook updates packages on servers listed in the inventory.
 
+2. **Implement Roles**: Automate the process of running targeted commands on multiple servers using Ansible playbooks.
+   - Project: [Implement roles](./implementing-roles)
+   - Description: This playbook implements roles which are used to define different tasks that run on different servers listed in the inventory.
+
 
 ## Getting Started
 
