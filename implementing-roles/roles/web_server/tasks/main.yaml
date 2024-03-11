@@ -1,0 +1,5 @@
+- name: install nginx package
+  tags: nginx,web
+  apt:
+    name: nginx
+    state: latest
